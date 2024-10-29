@@ -1,0 +1,11 @@
+<p style="color: green"><%= notice %></p>
+<%= turbo_frame_tag @produc do %>
+  <%= render @produc %>
+  <%= link_to "Edit this produc", edit_produc_path(@produc) %> |
+
+<% end %>
+<div>
+  <%= link_to "Back to producs", producs_path %>
+
+  <%= button_to "Destroy this produc", @produc, method: :delete %>
+</div>

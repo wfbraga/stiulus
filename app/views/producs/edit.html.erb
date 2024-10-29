@@ -1,0 +1,10 @@
+<h1>Editing produc</h1>
+<%= turbo_frame_tag @produc  do %>
+  <%= render "form", produc: @produc %>
+  <%= link_to "Return to product", @produc %>
+<% end %>
+<br>
+
+<div>
+  <%= link_to "Back to producs", producs_path %>
+</div>

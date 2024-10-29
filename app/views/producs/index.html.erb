@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Producs</h1>
+
+<div id="producs">
+  <% @producs.each do |produc| %>
+    <%= turbo_frame_tag produc do%>
+      <%= render produc %>
+    <% end %>
+    <p>
+      <%= link_to "Editar Producto", edit_produc_path(produc), data: { turbo_frame: "produc_#{produc.id}" }%>
+    </p>
+
+  <% end %>
+</div>
+
+<%= link_to "New produc", new_produc_path %>
